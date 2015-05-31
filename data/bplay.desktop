@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=BPlay
+Comment=Cross-platform internet radio player
+Exec=bplay
+Icon=bplay
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+MimeType=
+StartupNotify=true
