@@ -1,11 +1,13 @@
-BPlay
+About
 ======= 
-
-Cross-platform internet radio player
+BPlay is a cross-platform internet radio player
 
 Copyright © 2015
 
 <https://github.org/simargl>
+
+## Drone.io
+[![Build Status](https://drone.io/github.com/simargl/bplay/status.png)](https://drone.io/github.com/simargl/bplay/latest)
 
 **Credits**
 
