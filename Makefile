@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -g -I./include
-LDFLAGS = `fltk-config --ldflags --use-images` `fltk-config --cxxflags --use-images` -lbass32 -L./lib
+LDFLAGS = `fltk-config --ldflags --use-images` `fltk-config --cxxflags --use-images` -lbass64 -L./lib
 PROG = build/linux/bplay.bin
 OBJS = build/linux/play.o build/linux/stations.o build/linux/gui.o
 WINFLAGS = -I/usr/local/include -DWIN32 -DUSE_OPENGL32 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -L/usr/local/lib -mwindows -lfltk_images -lpng -lz -ljpeg -lfltk -lole32 -luuid -lcomctl32 -lbass
@@ -8,7 +8,7 @@ WINFLAGS = -I/usr/local/include -DWIN32 -DUSE_OPENGL32 -D_LARGEFILE_SOURCE -D_LA
 all: bplay.bin
 
 bplay.bin: gui.o play.o stations.o
-	${CC} -m32 $(OBJS) -o $(PROG) ${CFLAGS} ${LDFLAGS}
+	${CC} $(OBJS) -o $(PROG) ${CFLAGS} ${LDFLAGS}
 	cp lib/*.so data/*.png build/linux/
 
 gui.o:
@@ -38,7 +38,7 @@ install: all
 	install -Dm644 data/bplay.desktop $(DESTDIR)/usr/share/applications/bplay.desktop
 	install -Dm755 build/linux/bplay.bin $(DESTDIR)/usr/share/bplay/bplay.bin
 	install -Dm644 build/linux/bplay.png $(DESTDIR)/usr/share/bplay/bplay.png
-	install -Dm644 build/linux/libbass32.so $(DESTDIR)/usr/share/bplay/libbass32.so
+	install -Dm644 build/linux/libbass64.so $(DESTDIR)/usr/share/bplay/libbass64.so
 	install -d $(DESTDIR)/usr/share/icons/hicolor/64x64/apps
 	ln -sf ../../../../bplay/bplay.png $(DESTDIR)/usr/share/icons/hicolor/64x64/apps/bplay.png 
 
