@@ -1,5 +1,6 @@
 #!/bin/bash
 
-cd /usr/share/bplay
+SCRIPT_DIR=$(readlink -f ${0%/*})
+cd $SCRIPT_DIR/../share/bplay
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD"
 ./bplay.bin
