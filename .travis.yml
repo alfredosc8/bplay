@@ -1,0 +1,3 @@
+language: cpp
+before_script: "sudo apt-get install libfltk1.3-dev"
+script: "mkdir build/linux; make install DESTDIR=target; cd target; tar -cJf . bplay.tar.xz"
