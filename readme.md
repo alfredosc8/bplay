@@ -27,6 +27,8 @@ http://www.radiosure.com/stations/
 
 [Windows 32-bit](https://github.com/simargl/bplay/raw/master/releases/bplay-1.0.5-win32.tar.xz)
 
+[Linux 64-bit](https://drone.io/github.com/simargl/bplay/files/bplay-amd64.tar.xz)
+
 **How to install from source?**
 
 On Windows:
