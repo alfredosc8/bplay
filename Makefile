@@ -8,7 +8,7 @@ WINFLAGS = -I/usr/local/include -DWIN32 -DUSE_OPENGL32 -D_LARGEFILE_SOURCE -D_LA
 all: bplay.bin
 
 bplay.bin: gui.o play.o stations.o
-	${CC} $(OBJS) -o $(PROG) ${CFLAGS} ${LDFLAGS} 
+	${CC} -m32 $(OBJS) -o $(PROG) ${CFLAGS} ${LDFLAGS}
 	cp lib/*.so data/*.png build/linux/
 
 gui.o:
